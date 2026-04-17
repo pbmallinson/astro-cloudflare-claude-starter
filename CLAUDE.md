@@ -1,7 +1,7 @@
 # Project context for Claude
 
 This file is read automatically by Claude Code at the start of every session. Keep it up to date as your project evolves.
-
+check the readme in the project to get more context/instruction.
 ---
 
 ## Stack
