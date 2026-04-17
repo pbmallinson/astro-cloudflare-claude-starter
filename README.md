@@ -218,3 +218,208 @@ These are probably worth doing .. but to be honest I never did .. (perhaps claud
 ## Licence
 
 MIT — see [LICENSE](LICENSE).
+
+## Example
+This is the terminal 1 console log from me testing the template ..
+
+It should give you an idea of how losely you can be chatting to claude.
+
+This was approx 2 mins from starting claude to having an empty site running on my local machine.
+
+There is no real subtsance to the site at the end but it was running locally .. and that's where it starts to get fun ..
+
+```
+pbm@ubuntu-dev:~/lsrc/exp1$ claude
+           Claude Code v2.1.112
+ ▐▛███▜▌   Sonnet 4.6 with medium effort · Claude Pro
+▝▜█████▛▘  ~/lsrc/exp1
+  ▘▘ ▝▝    Welcome to Opus 4.7 xhigh! · /effort to tune speed vs. intelligence
+
+❯ "I've just cloned this template. Set up the tools, I want to: npm run dev"
+
+● Let me check the project structure first.
+
+  Listed 1 directory (ctrl+o to expand)
+
+● Bash(npm install)
+  ⎿  added 288 packages, and audited 289 packages in 6s
+
+     140 packages are looking for funding
+     … +3 lines (ctrl+o to expand)
+
+● Dependencies installed. Now run the dev server:
+
+● Bash(npm run dev)
+  ⎿  Running in the background (↓ to manage)
+
+● Bash(sleep 3 && cat /tmp/claude-1000/-home-pbm-lsrc-exp1/05465a24-de97-43c8-a044-6e2b69e8d8d4/tasks/
+      b0g7vzjzk.output)
+  ⎿  > your-site-name@0.1.0 dev
+     > NODE_OPTIONS=--no-deprecation astro dev
+     … +7 lines (ctrl+o to expand)
+
+● Dev server is running at http://localhost:4321/.
+
+  Next step: fill in CLAUDE.md (the "Your project" section) and docs/tone-of-voice.md /
+  docs/copy-rules.md so Claude has context for writing copy when you're ready.
+
+❯ OK do that for me
+
+● I need a few details first — I can't invent your product. Quick questions:
+
+  1. What does the site/business do? (1-2 sentences)
+  2. Who is it for? (your main audience)
+  3. What pages do you need? (beyond Home, About, Contact)
+  4. Tone? (e.g. professional, friendly, direct, witty, formal)
+  5. Any copy rules? (e.g. never use "synergy", always say "you" not "users", Oxford comma yes/no)
+
+❯ 1: makes jewlery 2: customers, high end ideas with modest means 3: you figure it out 4: use best
+  practice for driving enquiries 5: not sure but go for simple and easy to understand
+
+● Let me read the existing docs files first.
+
+● Reading 3 files… (ctrl+o to expand)
+  ⎿  CLAUDE.md
+
+● Update(CLAUDE.md)
+  ⎿  Added 6 lines, removed 5 lines
+      35
+      36  ## Your project
+      37
+      38 -**Fill in this section.** Claude reads it every session.
+      39 -
+      38  **What this site is:**
+      41 -[Describe your product or service in 1–2 sentences]
+      39 +A handmade jewellery business. Customers get the look and feel of high-end jewellery
+         +at prices that don't require a special occasion to justify.
+      40
+      41  **Who it's for:**
+      44 -[List your main audiences]
+      42 +People who love beautiful jewellery but don't want to pay luxury-brand prices — style
+         +-conscious buyers who want something unique and personal.
+      43
+      44 +**Goal:**
+      45 +Drive enquiries. Every page should give visitors a clear, easy next step to get in to
+         +uch or ask about a piece.
+      46 +
+      47  **Pages planned:**
+      48  - Home (`/`)
+      49  - About (`/about`)
+      50 +- Gallery (`/gallery`) — showcase pieces
+      51  - Contact (`/contact`)
+      50 -- [Add more as you build them]
+      52
+      53  **Copy rules:** see `docs/copy-rules.md`
+      54
+
+● Write(docs/tone-of-voice.md)
+  ⎿  Added 12 lines, removed 19 lines
+       1  # Tone of voice
+       2
+       3 -Fill this in so Claude matches your brand when writing copy.
+       4 -
+       3  ## Voice
+       4
+       7 -<!-- Describe the personality behind your writing. Examples:
+       8 -  - Direct and warm. Not corporate. Talks to readers as equals.
+       9 -  - Friendly but professional. Plain language. No jargon.
+      10 -  - Energetic and confident. Short sentences. Gets to the point.
+      11 --->
+       5 +Warm, honest, and direct. Talks to the reader as a person, not a customer. Confident
+         +without being boastful. No fluff — every sentence earns its place.
+       6
+       7 +The feeling to aim for: a skilled maker who is proud of their work and happy to talk
+         +about it, not a luxury brand trying to intimidate you into buying.
+       8 +
+       9  ## Things to avoid
+      10
+      15 -<!-- Examples:
+      16 -  - No exclamation marks
+      17 -  - No passive voice
+      18 -  - No filler phrases ("In order to...", "It is important to note that...")
+      19 -  - No em-dashes — rewrite the sentence instead
+      20 --->
+      11 +- No jargon ("artisanal", "curated", "bespoke" used lazily)
+      12 +- No hype or superlatives ("stunning", "incredible", "world-class")
+      13 +- No passive voice — say who does what
+      14 +- No filler phrases ("In order to...", "It is important to note that...")
+      15 +- No exclamation marks
+      16 +- Don't use "journey" to describe anything
+      17
+      18  ## On-brand copy examples
+      19
+      24 -<!-- Paste 2–3 sentences you like. Claude will pattern-match to these.
+      25 -  Examples:
+      26 -  - "We built this because we were frustrated with X."
+      27 -  - "No account needed. Just open it and go."
+      28 -  - "We're small, which means you'll actually talk to the person who built it."
+      29 --->
+      20 +- "Each piece is made by hand. If you don't see exactly what you want, ask — most thi
+         +ngs can be made to order."
+      21 +- "Good jewellery doesn't have to cost a fortune. It has to be made well."
+      22 +- "Tell us what you have in mind. We'll tell you what's possible and what it costs."
+
+● Write(docs/copy-rules.md)
+  ⎿  Added 9 lines, removed 8 lines
+       1  # Copy rules
+       2
+       3 -Rules Claude must follow when writing or editing copy on this site.
+       4 -
+       5 -<!-- Add your rules below. Examples:
+       6 -  - No em-dashes — rewrite the sentence instead
+       7 -  - Always use sentence case for headings (not Title Case)
+       8 -  - Spell the product name exactly: "YourProduct" not "your product"
+       9 -  - Never say something is "easy" — show why instead
+      10 --->
+       3 +- Use sentence case for all headings — not Title Case
+       4 +- Spell "jewellery" not "jewelry" (British English throughout)
+       5 +- Use "you" and "we" — never "customers", "users", or "clients"
+       6 +- Every page must have one clear call to action pointing toward contact or enquiry
+       7 +- Keep sentences short. If a sentence needs a comma, consider splitting it in two
+       8 +- Show value by being specific — "made by hand in the UK" beats "handcrafted with car
+         +e"
+       9 +- Never say something is "affordable" — let the price or context do that work
+      10 +- Oxford comma: yes
+      11 +- Numbers under 10: spell them out
+
+● Done. Three files updated:
+
+  - CLAUDE.md — project description, audience, goal, planned pages
+  - docs/tone-of-voice.md — warm and direct, maker not luxury brand, things to avoid
+  - docs/copy-rules.md — British spelling, sentence case, one CTA per page, no "affordable", etc.
+
+  One thing to confirm: I've used British English ("jewellery") — is that right for your market?
+
+❯ sure
+
+● Ready to build. A good next step would be updating src/config.ts with your site name and tagline,
+  then building out the home page. What's the business called?
+
+❯ name: sparkles tag: bling without funding
+
+  Read 1 file (ctrl+o to expand)
+
+● Update(src/config.ts)
+  ⎿  Added 3 lines, removed 2 lines
+       3  // generating pages and copy. After changing, tell Claude what you changed
+       4  // so it can update CLAUDE.md.
+       5
+       6 -export const SITE_NAME    = 'Your Site Name';
+       7 -export const SITE_TAGLINE = 'A short line that says what you do';
+       6 +export const SITE_NAME    = 'Sparkles';
+       7 +export const SITE_TAGLINE = 'Bling without funding';
+       8  export const SITE_DOMAIN  = import.meta.env.SITE_URL || 'https://example.com';
+       9
+      10  // Contact — used in the footer and anywhere Claude generates contact copy
+     ...
+      12
+      13  // Nav links — edit labels and hrefs, or ask Claude to add/remove entries
+      14  export const NAV_LINKS = [
+      15 +  { label: 'Gallery', href: '/gallery' },
+      16    { label: 'About',   href: '/about'   },
+      17    { label: 'Contact', href: '/contact' },
+      18  ];
+
+● Done. Name and tagline set, and I've added Gallery to the nav while I was in there. What's your
+  contact email — hello@example.com is still a placeholder?
+```
