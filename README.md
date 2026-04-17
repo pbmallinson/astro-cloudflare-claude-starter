@@ -113,31 +113,65 @@ The prompt was much more like:
 ---
 
 ## Deploy to Cloudflare Pages
-** TODO .. I need to make sure this is propely documented **
-1. Push your repo to GitHub
-2. Go to [Cloudflare Pages](https://pages.cloudflare.com) → Create a project → Connect to Git
-3. Select your repo
-4. Set build settings:
-   - **Build command:** `npm run build`
-   - **Build output directory:** `dist`
-5. Add environment variable:
-   - `SITE_URL` = `https://yourdomain.com`
-6. Deploy
 
-After the initial setup, every push to the `production` branch auto-deploys.
+### One-time setup
 
-**Branch workflow:**
-- `development` — day-to-day working branch
-- `production` — Cloudflare Pages watches this. Pushing here deploys the site.
+**1. Update `wrangler.jsonc`**
+
+Change `"name": "your-site-name"` to a short slug — this becomes your Cloudflare Pages project name and your initial URL (`your-slug.pages.dev`).
+
+**2. Log in to Wrangler**
 
 ```bash
-# When you're ready to go live:
+npx wrangler login
+```
+
+Opens a browser. Authorise it in the Cloudflare dashboard, then return to the terminal.
+
+**3. Connect your GitHub repo**
+
+1. Go to [Cloudflare Pages](https://pages.cloudflare.com) → **Create a project** → **Connect to Git**
+2. Select your repo
+3. Set build settings:
+   - **Build command:** `npm run build`
+   - **Build output directory:** `dist`
+4. Add an environment variable:
+   - `SITE_URL` = `https://yourdomain.com` (or `https://your-slug.pages.dev` to start)
+5. Click **Save and Deploy**
+
+That's it. Your site is live at `your-slug.pages.dev`.
+
+> **Why `SITE_URL` matters:** Astro uses it to generate your sitemap and canonical link tags. Without it those will contain `https://example.com`.
+
+### Deploying changes
+
+After the initial setup, push to the `production` branch — Cloudflare Pages deploys automatically.
+
+```bash
+# When your changes are ready:
 git checkout production
 git merge development
 git push
 ```
 
-Ask Claude: *"Merge development to production and push"* — it will handle this for you.
+Or just tell Claude: *"Merge development to production and push"*
+
+### Manual deploy (no GitHub connection)
+
+If you prefer not to connect GitHub, deploy from the CLI at any time:
+
+```bash
+npm run deploy
+```
+
+This builds the site and pushes it to Cloudflare Pages via Wrangler.
+
+### Custom domain
+
+Once your site is live on `*.pages.dev`:
+- Cloudflare Pages → project → **Custom Domains** → **Add a domain**
+- If your domain is registered with Cloudflare it wires up automatically; otherwise add a CNAME at your registrar.
+- Update `SITE_URL` in Cloudflare Pages → **Settings → Environment variables** to your real domain, then redeploy.
 
 ---
 
