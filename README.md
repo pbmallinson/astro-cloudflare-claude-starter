@@ -69,7 +69,7 @@ claude
 
 Claude reads `CLAUDE.md` automatically. A good opening prompt:
 
-> "I've just cloned this template. Set up the tools, I want to: npm run dev"
+> "I've just cloned this template. Set up the tools so can run: npm run dev in another terminal"
 
 Claude should get everything soted for you.
 
