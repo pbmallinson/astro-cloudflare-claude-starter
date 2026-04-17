@@ -1,0 +1,6 @@
+# Local-only secrets for `wrangler dev` / `npm run preview`.
+# Copy to .dev.vars (git-ignored) and fill in real values.
+# Add real values to Cloudflare Pages → Settings → Environment variables for production.
+
+# Example — uncomment and fill in if you add Mixpanel:
+# PUBLIC_MIXPANEL_TOKEN=your_token_here

@@ -1,0 +1,17 @@
+---
+import Base from '../layouts/Base.astro';
+import { SITE_NAME, SITE_TAGLINE } from '../config';
+---
+
+<Base title="Home">
+  <section class="section">
+    <div class="container">
+      <h1>{SITE_NAME}</h1>
+      <p class="text-muted mt-md">{SITE_TAGLINE}</p>
+      <div class="cta-group">
+        <a href="/contact" class="btn btn--primary">Get started</a>
+        <a href="/about" class="btn btn--outline">Learn more</a>
+      </div>
+    </div>
+  </section>
+</Base>
